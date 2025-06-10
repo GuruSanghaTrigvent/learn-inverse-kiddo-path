@@ -1,0 +1,6 @@
+
+[functions.get-secret]
+verify_jwt = false
+
+[functions.text-to-speech]
+verify_jwt = false

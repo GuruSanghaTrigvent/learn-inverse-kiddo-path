@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins antialiased;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-secondary to-background;
+  }
+
+  .card-hover {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .button-hover {
+    @apply transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  /* Young kids specific styles */
+  .kid-card-5-6 {
+    @apply bg-gradient-to-br from-[#FEF7CD] to-[#FEC6A1] rounded-3xl p-6 shadow-xl 
+           border-4 border-[#FFD93D] transition-transform duration-300 
+           hover:scale-105 hover:shadow-2xl cursor-pointer;
+  }
+
+  .kid-button-5-6 {
+    @apply bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-white rounded-full 
+           py-4 px-8 text-xl font-bold shadow-lg transition-all duration-300 
+           hover:scale-105 hover:shadow-xl active:scale-95;
+  }
+
+  .kid-text-5-6 {
+    @apply text-2xl font-bold leading-relaxed tracking-wide;
+  }
+
+  .kid-icon-5-6 {
+    @apply w-16 h-16 text-[#7E69AB] animate-bounce;
+  }
+  
+  /* Kid-friendly color variations */
+  .bg-kid-pink-light {
+    @apply bg-gradient-to-br from-[#FFD6E0] to-[#FFADAD];
+  }
+  
+  .bg-kid-blue-light {
+    @apply bg-gradient-to-br from-[#C8E7FF] to-[#98C1D9];
+  }
+  
+  .bg-kid-green-light {
+    @apply bg-gradient-to-br from-[#D8F3DC] to-[#95D5B2];
+  }
+  
+  .bg-kid-purple-light {
+    @apply bg-gradient-to-br from-[#E0C3FC] to-[#B892FF];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
